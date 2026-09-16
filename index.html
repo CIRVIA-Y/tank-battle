@@ -197,7 +197,7 @@ function shade(hex, f) {
 /* ============================= 游戏状态 ============================= */
 let mode = 'title';        // title | playing | paused | clear | gameover
 let stage = 1;
-let map = [];
+let map = Array.from({ length: ROWS }, () => Array(COLS).fill(T.EMPTY));
 let baseCells = [];        // 基地砖墙围栏(铲子道具时变钢墙)
 let eagleCell = { c: 6, r: 12 };
 let player = null;
